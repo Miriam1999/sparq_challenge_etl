@@ -1,0 +1,9 @@
+.git
+myenv
+**/__pycache__
+*.pyc
+.pytest_cache
+logs
+*.md
+.env
+**/.env

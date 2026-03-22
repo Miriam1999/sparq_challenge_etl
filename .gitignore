@@ -1,0 +1,17 @@
+# Secrets
+.env
+.env.*
+!.env.example
+myenv/
+
+# Local data / archives (not for git)
+base_folder/
+
+# Airflow runtime (bind-mounted)
+logs/
+
+# Airflow plugins (optional local code); keep folder with .gitkeep if needed
+plugins/*
+!plugins/.gitkeep
+
+scripts/dimensions/
