@@ -6,19 +6,19 @@ Identify the conditions that correlate with fatal road accident outcomes in the 
 
 ## What's in this repository
 ```
-├── bronze/          SQL scripts to load raw CSV data into Snowflake Bronze layer
-├── silver/          SQL scripts for type casting, cleaning, and quality validation
-├── gold/            SQL scripts for pre-aggregated tables powering the dashboard
-├── eda/             Python EDA notebook (Snowflake Snowpark) covering data quality,
-│                    referential integrity, temporal distribution, and risk factor analysis
-└── docs/            Final Power BI dashboard (.pbix) and supporting process reports
+├── dags/sql/bronze_job.sql          SQL scripts to load raw CSV data into Snowflake Bronze layer
+├── dags/sql/silver_job.sql          SQL scripts for type casting, cleaning, and quality validation
+├── dags/sql/gold_job.sql            SQL scripts for pre-aggregated tables powering the dashboard
+│                    
+└── docs/            Final Power BI dashboard (.pbix) and supporting process reports, as well as EDA.
 ```
 
 ## Stack
 - **Snowflake** — data warehouse, all ETL layers (Bronze → Silver → Gold)
-- **Python / Snowpark** — exploratory data analysis
+- **SQL** - ETL layers files
+- **Python** — exploratory data analysis
 - **Power BI** — dashboard and visualization
-- **STATS19** — UK road accident dataset, 2015–2019
+- **Airflow** - data orchestration
 
 ## Dashboard narrative
 The dashboard is structured around a single question: **what kills on UK roads?**
